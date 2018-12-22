@@ -12,6 +12,23 @@
                 this.result += param;
             }
         }
+    public  void  Multiplication(int ... params){
+        this.result = 1;
+        for (int param:params){
+            this.result *= param;
+        }
+    }
+        public  void  Subtraction(int ... params){
+
+            for (int param:params){
+                this.result -= param;
+            }
+        }
+        public  void  Division(int ... params){
+            this.result = params[0];
+                this.result /= params[1];
+        }
+
         /*
         * Получить результат
         * */

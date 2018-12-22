@@ -16,9 +16,35 @@ public class Runner{
                 String first = reader.next();
                 System.out.println("Enter : second arg");
                 String second = reader.next();
-                calc.add(Integer.valueOf(first),Integer.valueOf(second));
-                System.out.println("Result: " + calc.getResult());
-                calc.cleanResult();
+                System.out.println("Select operation");
+                System.out.println(" 1. ADD");
+                System.out.println(" 2. Multiplication");
+                System.out.println(" 3. Subtraction");
+                System.out.println(" 4. Division");
+                String third = reader.next();
+                switch (third){
+                    case "1":
+                        calc.add(Integer.valueOf(first),Integer.valueOf(second));
+                        System.out.println("Result add: " + calc.getResult());
+                        calc.cleanResult();
+                        break;
+                    case "2":
+                        calc.Multiplication(Integer.valueOf(first),Integer.valueOf(second));
+                        System.out.println("Result Multiplication: " + calc.getResult());
+                        calc.cleanResult();
+                        break;
+                    case "3":
+                        calc.Subtraction(Integer.valueOf(first),Integer.valueOf(second));
+                        System.out.println("Result Subtraction: " + calc.getResult());
+                        calc.cleanResult();
+                        break;
+                    case "4":
+                        calc.Division(Integer.valueOf(first),Integer.valueOf(second));
+                        System.out.println("Result Division: " + calc.getResult());
+                        calc.cleanResult();
+                        break;
+                }
+                //ChooseOperation(third,Integer.parseInt(first),Integer.parseInt(second));
                 System.out.println("Exit : yes/no");
                 exit = reader.next();
             }
